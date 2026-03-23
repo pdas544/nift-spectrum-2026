@@ -3823,3 +3823,103 @@ footer {
 .visitor-counter .vc-label {
     text-transform: uppercase;
 }
+
+/* ===== Bootstrap Header Collapse Overrides ===== */
+#main-header .navbar-collapse {
+    flex: 2;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.2rem;
+}
+
+#main-header .custom-nav-toggler {
+    border: 1px solid var(--glass-border);
+    background: rgba(255, 255, 255, 0.06);
+    box-shadow: none;
+}
+
+#main-header .custom-nav-toggler:focus {
+    box-shadow: 0 0 0 0.18rem rgba(255, 235, 59, 0.25);
+}
+
+#main-header .custom-nav-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255,255,255,0.92%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2.1' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+@media (min-width: 992px) {
+    /* Keep nav always visible on desktop even with Bootstrap collapse classes */
+    #main-header .navbar-collapse {
+        display: flex !important;
+    }
+}
+
+@media (max-width: 991.98px) {
+    #main-header {
+        row-gap: 10px;
+        position: fixed;
+    }
+
+    #main-header .navbar-collapse {
+        position: absolute;
+        top: calc(100% + 6px);
+        left: 0;
+        right: 0;
+        z-index: 1200;
+        width: 100%;
+        margin-top: 0;
+        padding: 0 14px;
+        border-radius: 14px;
+        border: 1px solid var(--glass-border);
+        background: var(--nav-bg);
+        backdrop-filter: var(--frosted-glass);
+        -webkit-backdrop-filter: var(--frosted-glass);
+        display: block !important;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transform: translateY(-8px);
+        pointer-events: none;
+        transition: max-height 0.24s ease, opacity 0.2s ease, transform 0.2s ease, padding 0.2s ease;
+    }
+
+    #main-header .navbar-collapse.show,
+    #main-header .custom-nav-toggler[aria-expanded="true"] + .navbar-collapse.collapsing {
+        max-height: 430px;
+        padding-top: 14px;
+        padding-bottom: 14px;
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+
+    /* Make close feel immediate: don't keep open-state styles during collapsing-out */
+    #main-header .custom-nav-toggler[aria-expanded="false"] + .navbar-collapse.collapsing {
+        max-height: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        opacity: 0;
+        transform: translateY(-8px);
+        pointer-events: none;
+    }
+
+    #main-header nav,
+    #main-header nav ul {
+        width: 100%;
+    }
+
+    #main-header nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.85rem;
+    }
+
+    #main-header .header-contact {
+        width: 100%;
+        justify-content: flex-start;
+        margin-top: 6px;
+    }
+
+    #main-header .nav-register-btn {
+        padding: 9px 18px !important;
+    }
+}

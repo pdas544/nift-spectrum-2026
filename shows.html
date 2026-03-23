@@ -11,9 +11,10 @@
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="galaxy-body">
+<body class="galaxy-body d-flex flex-column min-vh-100">
 
     <div class="stars-bg">
         <div class="star-layer star-layer-1"></div>
@@ -22,13 +23,18 @@
     </div>
     <canvas id="water-ripples"></canvas>
 
-    <header id="main-header">
+    <header id="main-header" class="container-fluid px-3 px-lg-5">
         <div class="logo-container">
             <a href="index.html">
                 <img src="images/Nift_logo_orginal1.png" alt="Logo" class="nav-logo-img">
             </a>
         </div>
-        <nav>
+        <button class="navbar-toggler custom-nav-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#primaryNav" aria-controls="primaryNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="primaryNav">
+            <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="events.html" class="active-link">Events</a></li>
@@ -36,12 +42,13 @@
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
-         <div class="header-contact">
+            <div class="header-contact">
             <a href="https://forms.gle/5urBq3kumRg4wjuAA" target="_blank" class="register-btn nav-register-btn">REGISTER NOW</a>
+        </div>
         </div>
     </header>
 
-    <main class="page-layout">
+    <main class="page-layout container-fluid flex-grow-1 d-flex">
         <div class="sidebar-tabs">
             <div class="day-tab active" onclick="filterEvents(1)">DAY 1</div>
             <div class="day-tab" onclick="filterEvents(2)">DAY 2</div>
@@ -55,8 +62,8 @@
     </main>
 
     <footer>
-        <div class="footer-content">
-            <div class="footer-col">
+        <div class="footer-content row g-4">
+            <div class="footer-col col-12 col-md-6 col-lg-4">
                 <h4>SITE MAP</h4>
                 <ul class="site-map" id="footer-sitemap">
                     <li><a href="index.html">Home</a></li></br>
@@ -65,7 +72,7 @@
                     <li><a href="team.html">Team</a></li>
                 </ul>
             </div>
-            <div class="footer-col">
+            <div class="footer-col col-12 col-md-6 col-lg-4">
                 <h4>FIND US HERE</h4>
                 <div class="social-icons">
                     <a href="https://www.instagram.com/spectrum.niftbbsr26/" target="_blank" rel="noopener noreferrer">
@@ -84,6 +91,7 @@
             <div class="visitor-counter" id="visitor-counter"></div>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
