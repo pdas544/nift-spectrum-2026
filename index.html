@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naksh - Spectrum 2026</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+</head>
+<body class="galaxy-body">
+
+    <div class="stars-bg">
+        <div class="star-layer star-layer-1"></div>
+        <div class="star-layer star-layer-2"></div>
+        <div class="star-layer star-layer-3"></div>
+        
+        <div class="shooting-stars">
+            <div class="shooting-star"></div>
+            <div class="shooting-star"></div>
+            <div class="shooting-star"></div>
+            <div class="shooting-star"></div>
+            <div class="shooting-star"></div>
+        </div>
+    </div>
+    <canvas id="water-ripples"></canvas>
+
+    <header id="main-header">
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="images/Nift_logo_orginal1.png" alt="Logo" class="nav-logo-img">
+            </a>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active-link">Home</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="craft bazaar.html">Craft Bazaar</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        
+        <div class="header-contact">
+            <a href="https://forms.gle/5urBq3kumRg4wjuAA" target="_blank" class="register-btn nav-register-btn">REGISTER NOW</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="landing">
+            <img src="images/naksh logo.png" alt="Naksh Logo" id="naksh-main-logo">
+            <p class="section-date">March 26th & 27th, 2026</p>
+        <a href="#about" class="scroll-down-link">
+        <img src="images/scroll.png" alt="Scroll Down" class="spaceship-scroll">
+    </a>
+        </section>
+        
+
+        <section id="about">
+            <div class="about-top-section">
+                <div class="naksh-content-stack">
+                    <div class="sponsor-logo-box">
+                        <img src="images/sponsorname.jpg" alt="Title Sponsor Logo">
+                    </div>
+                    <p class="presents-text">Presents...</p>
+                    
+                    <p class="section-date">March 26th & 27th, 2026</p>
+                    
+                    <img src="images/naksh logo.png" alt="Naksh 2026" class="naksh-logo-img">
+                    
+                    <p class="naksh-desc">Where every pattern tells a story written in starlight. We absorb culture's cosmic energy, transform it into intricate naksh (designs), and radiate innovation. From celestial to textile, we weave the universe into fabric.</p>
+                    
+                    <a href="https://forms.gle/5urBq3kumRg4wjuAA" target="_blank" class="register-btn">REGISTER NOW</a>
+                </div>
+                
+                <div class="media-split-grid">
+                    <div class="video-desc-box">
+                        <strong>Experience Naksh:</strong> Dive into our official teaser. Enter a world where traditional fashion textures collide with a futuristic, galactic aesthetic.
+                    </div>
+                    <div class="media-placeholder video-placeholder">
+                        <video autoplay muted loop id="naksh-video">
+                            <source src="images/teaser.mp4" type="video/mp4">
+                            Your browser does not support HTML5 video.
+                        </video>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="about-grid about-grid-rtl">
+                <div class="about-text about-dir-ltr">
+                    <h1 class="section-header about-heading-left">About Spectrum</h1>
+                    <p>Spectrum is the flagship annual cultural festival of the National Institute of Fashion Technology (NIFT), Bhubaneswar — a vibrant celebration that brings together the brightest young minds from across the city and beyond.</p>
+                    <p>More than just a college fest, Spectrum is a melting pot of creativity, talent, and expression. The festival pulses with energy across a rich and diverse array of events. From electrifying performances in the performing arts to high-spirited sports competitions, Spectrum offers every participant a stage to shine.</p>
+                </div>
+                <div class="media-placeholder about-dir-ltr">
+                    <span > 
+                        <div class="slideshow-container">
+
+<div class="media-placeholder about-dir-ltr">
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="images/fashion show.JPG" alt="Spectrum Photo 1">
+        </div>
+        
+        <div class="mySlides fade">
+            <img src="images/dancee.JPG" alt="Spectrum Photo 2">
+        </div>
+        
+        <div class="mySlides fade">
+            <img src="images/star.JPG" alt="Spectrum Photo 3">
+        </div>
+        <div class="mySlides fade">
+            <img src="images/mr. & ms. spectrum.JPG" alt="Spectrum Photo 3">
+        </div>
+        <div class="mySlides fade">
+            <img src="images/f show.JPG" alt="Spectrum Photo 3">
+        </div>
+
+        <div class="dots-container">
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+</section>
+
+        <section id="events">
+            <h1 class="section-header">Events Showcase</h1>
+            
+            <div class="carousel-container">
+                <div class="carousel-track" id="carousel-track">
+                    <div class="carousel-card" onclick="updateCarousel(0)">
+                        <img src="images/Caricature.png" alt="Event 1">
+                        <div class="card-info">
+                            <h3>Caricature Competition</h3>
+                            <p>Venue - FD 219</p>
+                            <div class="event-meta">
+                                <span>Mar 27</span>
+                                <span>1:30 PM</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-card" onclick="updateCarousel(1)">
+                        <img src="images/SoloS.png" alt="Event 2">
+                        <div class="card-info">
+                            <h3>Solo Singing</h3>
+                            <p>Venue - FD 222</p>
+                            <div class="event-meta">
+                                <span>Mar 26</span>
+                                <span>3:30 PM</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-card" onclick="updateCarousel(2)">
+                        <img src="images/admad.png" alt="Event 3">
+                        <div class="card-info">
+                            <h3>Ad Mad</h3>
+                            <p>Venue- FD 222</p>
+                            <div class="event-meta">
+                                <span>Mar 27</span>
+                                <span>10:30 AM</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-card" onclick="updateCarousel(3)">
+                        <img src="images/nukkad-card.PNG" alt="Event 4">
+                        <div class="card-info">
+                            <h3>Nukkad Natak</h3>
+                            <p>Venue- AD TD Passage</p>
+                            <div class="event-meta">
+                                <span>Mar 27</span>
+                                <span>10:30 AM</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-card" onclick="updateCarousel(4)">
+                        <img src="images/FS.png" alt="Event 5">
+                        <div class="card-info">
+                            <h3>Fashion Show Competition </h3>
+                            <p>Venue - Main Stage</p>
+                            <div class="event-meta">
+                                <span>Mar 27</span>
+                                <span>7:30 pM</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-card" onclick="updateCarousel(5)">
+                        <img src="images/FIFA.png" alt="Event 6">
+                        <div class="card-info">
+                            <h3>E-sports(FIFA)</h3>
+                            <p>Venue - BFT 004, BFT 005</p>
+                            <div class="event-meta">
+                                <span>Mar 26</span>
+                                <span>1:30 PM</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-card" onclick="updateCarousel(6)">
+                        <img src="images/throw.png" alt="Event 7">
+                        <div class="card-info">
+                            <h3>Throwball(Girls)</h3>
+                            <p>Venue-Volleyball Ground</p>
+                            <div class="event-meta">
+                                <span>Mar 26</span>
+                                <span>7:00 Am</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-card" onclick="updateCarousel(7)">
+                        <img src="images/groupdance.PNG" alt="Event 8">
+                        <div class="card-info">
+                            <h3>Group Dance</h3>
+                            <p>Main stage</p>
+                            <div class="event-meta">
+                                <span>Mar 27</span>
+                                <span>5:30 PM</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-card" onclick="updateCarousel(8)">
+                        <img src="images/Chess.png" alt="Event 9">
+                        <div class="card-info">
+                            <h3>Chess</h3>
+                            <p>Venue- FD 122</p>
+                            <div class="event-meta">
+                                <span>Mar 27</span>
+                                <span>1:30 PM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <a href="events.html" class="know-more-btn">Explore All Events</a>
+        </section>
+
+        <section id="sponsors-list">
+            <h1 class="section-header">Sponsors</h1>
+            <div class="sponsors-grid">
+                <div class="sponsor-card-white">
+                    <img src="images/ubi.png" alt="Sponsor 1" class="sponsor-logo-placeholder">
+                </div>
+                <div class="sponsor-card-white">
+                    <img src="images/red bull.png" alt="Sponsor 2" class="sponsor-logo-placeholder">
+                </div>
+                <div class="sponsor-card-white">
+                    <img src="images/" alt="Sponsor 3" class="sponsor-logo-placeholder">
+                </div>
+                <div class="sponsor-card-white">
+                    <img src="sponsor_logo_4.png" alt="Sponsor 4" class="sponsor-logo-placeholder">
+                </div>
+                <div class="sponsor-card-white">
+                    <img src="sponsor_logo_5.png" alt="Sponsor 5" class="sponsor-logo-placeholder">
+                </div>
+                <div class="sponsor-card-white">
+                    <img src="sponsor_logo_6.png" alt="Sponsor 6" class="sponsor-logo-placeholder">
+                </div>
+                <div class="sponsor-card-white">
+                    <img src="sponsor_logo_7.png" alt="Sponsor 7" class="sponsor-logo-placeholder">
+                </div>
+                <div class="sponsor-card-white">
+                    <img src="images/jaiswal.png" alt="Sponsor 8" class="sponsor-logo-placeholder">
+                </div>
+            </div>
+        </section>
+
+        <section id="faq">
+            <h1 class="section-header">FAQs</h1>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">1. What is Naksh? <span class="faq-icon">+</span></div>
+                    <div class="faq-answer">Naksh is the annual technical and cultural fest, featuring a blend of competitions, workshops, and entertainment nights focusing on the fusion of fashion and the cosmos.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">2. When will the fest be held? <span class="faq-icon">+</span></div>
+                    <div class="faq-answer">The upcoming edition will be held from March 26-27, 2026. Keep an eye on our portal for the exact timetable.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">3. How to register for Events? <span class="faq-icon">+</span></div>
+                    <div class="faq-answer">You can register through the "Register" button on this website and you will be redirected to our Google Form.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">4. What is Craft Bazaar? <span class="faq-icon">+</span></div>
+                    <div class="faq-answer">The two day CRAFT BAZAAR, gives a good platform to artisans and people to interact and exchange design and craft knowledge and experiences.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">5. Who can participate? <span class="faq-icon">+</span></div>
+                    <div class="faq-answer">It brings together tech enthusiasts, innovators, students, and industry leaders from across the country. Everyone is welcome to join the cosmic celebration!</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>SITE MAP</h4>
+                <ul class="site-map" id="footer-sitemap">
+                    <li><a href="index.html">Home</a></li></br>
+                    <li><a href="events.html">Events</a></li></br>
+                    <li><a href="craft bazaar.html">Craft Bazaar</a></li></br>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>FIND US HERE</h4>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/spectrum.niftbbsr26/" target="_blank" rel="noopener noreferrer">
+                        <img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram">
+                    </a>
+                </div>
+                <div class="address-box">
+                    <p><strong>National Institute of Fashion Technology</strong><br>
+                        IDCO Plot Number 24, Plot No. 24, KIIT Fashion Tech Rd, Chandaka Industrial Estate, KIIT University,<br>
+                        Patia, Bhubaneswar, Odisha 751024</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Naksh Spectrum. All rights reserved.
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

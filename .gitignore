@@ -1,0 +1,6 @@
+./images/
+./logs/
+./tmp/
+.DS_Store
+*.log
+*.tmp
