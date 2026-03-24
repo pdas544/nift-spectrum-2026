@@ -620,7 +620,7 @@ footer {
 }
 .footer-content {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 30px;
     width: 100%;
 }
@@ -631,6 +631,7 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 15px;
+    margin-left: -30px;
 }
 
 .site-map a { transition: color 0.3s, opacity 0.3s; }
@@ -662,8 +663,8 @@ footer {
     nav ul { gap: 1rem; font-size: 0.8rem; }
 
     #naksh-main-logo {
-        max-width: 50%;
-        height: 25%;
+        max-width: 260px;
+        height: 120px;
     }
 
     .know-more-btn{
