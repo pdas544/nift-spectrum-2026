@@ -124,6 +124,7 @@ header.scrolled {
     display: flex; 
     justify-content: flex-start;
     align-items: center; 
+    margin-top: 10px; /* Adjusts vertical alignment of logo */
 }
 
 .nav-logo-img { 
@@ -182,8 +183,8 @@ nav a:hover, nav a.active-link {
 }
 
 .register-btn {
-    background: var(--accent-yellow);
-    color: var(--primary-bg);
+    /* background: var(--accent-yellow); */
+    color:var(--accent-yellow);
     border: none;
     padding: 14px 40px;
     border-radius: 30px;
@@ -199,14 +200,22 @@ nav a:hover, nav a.active-link {
 
 .register-btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(255, 235, 59, 0.3);
+    /* box-shadow: 0 10px 25px rgba(255, 235, 59, 0.3); */
 }
 
 /* --- Layout & Sections --- */
 section { padding: 100px 10%; min-height: 80vh; display: flex; flex-direction: column; justify-content: center; }
 
 #landing { text-align: center; align-items: center; height: 100vh; padding-top: 80px; }
-#naksh-main-logo {height: 230px;width: 510px; margin-bottom: 2rem; display: flex; align-items: center; justify-content: center; filter: drop-shadow(0 0 30px rgba(156, 39, 176, 0.4));}
+#naksh-main-logo {
+    /* max-width: 510px; */
+    width: 360px;
+    height: 150px;
+    margin-bottom: 2rem;
+    display: block;
+    filter: drop-shadow(0 0 30px rgba(156, 39, 176, 0.4));
+    
+}
 
 
 .about-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 7rem; align-items: center; margin-bottom: 2px; }
@@ -247,7 +256,7 @@ section { padding: 100px 10%; min-height: 80vh; display: flex; flex-direction: c
 }
 
 .sponsor-logo-box img {
-    height: 70px;
+    height: 80px;
     width: auto;
     object-fit: contain;
 }
@@ -347,6 +356,51 @@ section { padding: 100px 10%; min-height: 80vh; display: flex; flex-direction: c
     box-shadow: 0 15px 35px rgba(0,0,0,0.4);
     overflow: hidden;
     position: relative;
+}
+
+/* Video thumbnail styles */
+.video-thumbnail {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.video-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.video-thumbnail:hover img {
+    transform: scale(1.05);
+}
+
+.video-thumbnail .play-button-overlay {
+    transition: all 0.3s ease !important;
+}
+
+/* Video modal styles */
+#videoModal .modal-content {
+    background: #000 !important;
+    border: none !important;
+}
+
+#videoModal .modal-body {
+    padding: 0 !important;
+}
+
+#videoModal .btn-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1050;
+    opacity: 0.8;
+}
+
+#videoModal .btn-close:hover {
+    opacity: 1;
 }
 
 #naksh-video {
@@ -455,7 +509,7 @@ section { padding: 100px 10%; min-height: 80vh; display: flex; flex-direction: c
     background: var(--accent-yellow);
     color: var(--primary-bg);
     border: none;
-    padding: 14px 40px; 
+    padding: 14px 20px; 
     border-radius: 30px;
     font-weight: 700;
     cursor: pointer;
@@ -465,6 +519,8 @@ section { padding: 100px 10%; min-height: 80vh; display: flex; flex-direction: c
     letter-spacing: 1px;
     margin-top: 15px; 
     display: inline-block;
+    width: 40%;
+    max-width: 50%;
 }
 
 .know-more-btn:hover { 
@@ -473,7 +529,7 @@ section { padding: 100px 10%; min-height: 80vh; display: flex; flex-direction: c
 }
 
 /* --- Sponsors Grid Section --- */
-#sponsors-list { padding: 80px 10%; text-align: center; }
+#sponsors-list { padding: 40px 10%; text-align: center; height: auto;}
 
 .sponsors-grid {
     display: grid;
@@ -604,7 +660,18 @@ footer {
     .naksh-content-stack { align-items: center; text-align: center; margin: 0 auto; }
     .sponsors-grid { grid-template-columns: repeat(2, 1fr); }
     nav ul { gap: 1rem; font-size: 0.8rem; }
-    .header-contact { display: none; } 
+
+    #naksh-main-logo {
+        max-width: 50%;
+        height: 25%;
+    }
+
+    .know-more-btn{
+        width: 250px;
+        max-width: 250px;
+    }
+    
+   
 }/* --- Image Slider Styles --- */
 .slideshow-container {
     width: 100%;
@@ -797,8 +864,8 @@ footer {
         }
 
         .register-btn {
-            background: var(--accent-yellow);
-            color: var(--primary-bg);
+            /* background: var(--accent-yellow); */
+            color: var(--accent-yellow);
             border: none;
             padding: 14px 40px;
             border-radius: 30px;
@@ -948,7 +1015,7 @@ footer {
             #craft-bazaar { padding-top: 120px; }
             .crafts-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
             .footer-content { grid-template-columns: 1fr; text-align: center; }
-            .header-contact { display: none; }
+            .header-contact { display: flex; justify-content: center; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255, 255, 255, 0.1); }
             nav ul { gap: 1rem; font-size: 0.8rem; }
         }
 /* ===== Source: css/craft.css ===== */
@@ -1169,7 +1236,7 @@ footer {
             #craft-bazaar { padding-top: 120px; }
             .crafts-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
             .footer-content { grid-template-columns: 1fr; text-align: center; }
-            .header-contact { display: none; }
+            .header-contact { display: flex; justify-content: center; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255, 255, 255, 0.1); }
             nav ul { gap: 1rem; font-size: 0.8rem; }
         }
 /* ===== Source: css/cultural.css ===== */
@@ -1310,7 +1377,7 @@ footer {
             .day-tab { writing-mode: horizontal-tb; transform: none; padding: 15px 30px; border-radius: 10px 10px 0 0; border-left: 1px solid var(--glass-border); border-bottom: none; }
             .day-tab.active { border-right: 1px solid var(--glass-border); border-bottom: 4px solid var(--accent-yellow); }
             .footer-content { grid-template-columns: 1fr; text-align: center; }
-            .header-contact { display: none; }
+            .header-contact { display: flex; justify-content: center; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255, 255, 255, 0.1); }
             .modal-meta { flex-direction: column; gap: 10px; text-align: left; }
             .meta-right { text-align: left; }
         }
@@ -1455,7 +1522,7 @@ footer {
             .day-tab { writing-mode: horizontal-tb; transform: none; padding: 15px 30px; border-radius: 10px 10px 0 0; border-left: 1px solid var(--glass-border); border-bottom: none; }
             .day-tab.active { border-right: 1px solid var(--glass-border); border-bottom: 4px solid var(--accent-yellow); }
             .footer-content { grid-template-columns: 1fr; text-align: center; }
-            .header-contact { display: none; }
+            .header-contact { display: flex; justify-content: center; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255, 255, 255, 0.1); }
             .modal-meta { flex-direction: column; gap: 10px; text-align: left; }
             .meta-right { text-align: left; }
         }
@@ -1677,7 +1744,7 @@ footer {
             #craft-bazaar { padding-top: 120px; }
             .crafts-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
             .footer-content { grid-template-columns: 1fr; text-align: center; }
-            .header-contact { display: none; }
+            .header-contact { display: flex; justify-content: center; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255, 255, 255, 0.1); }
             nav ul { gap: 1rem; font-size: 0.8rem; }
         }
 /* ===== Source: css/literary.css ===== */
@@ -1898,7 +1965,7 @@ footer {
             #craft-bazaar { padding-top: 120px; }
             .crafts-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
             .footer-content { grid-template-columns: 1fr; text-align: center; }
-            .header-contact { display: none; }
+            .header-contact { display: flex; justify-content: center; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255, 255, 255, 0.1); }
             nav ul { gap: 1rem; font-size: 0.8rem; }
         }
 /* ===== Source: css/photography.css ===== */
@@ -2119,7 +2186,7 @@ footer {
             #craft-bazaar { padding-top: 120px; }
             .crafts-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
             .footer-content { grid-template-columns: 1fr; text-align: center; }
-            .header-contact { display: none; }
+            .header-contact { display: flex; justify-content: center; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255, 255, 255, 0.1); }
             nav ul { gap: 1rem; font-size: 0.8rem; }
         }
 /* ===== Source: css/shows.css ===== */
@@ -2340,7 +2407,7 @@ footer {
             #craft-bazaar { padding-top: 120px; }
             .crafts-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
             .footer-content { grid-template-columns: 1fr; text-align: center; }
-            .header-contact { display: none; }
+            .header-contact { display: flex; justify-content: center; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255, 255, 255, 0.1); }
             nav ul { gap: 1rem; font-size: 0.8rem; }
         }
 /* ===== Source: css/sports.css ===== */
@@ -2480,7 +2547,7 @@ footer {
             .day-tab { writing-mode: horizontal-tb; transform: none; padding: 15px 30px; border-radius: 10px 10px 0 0; border-left: 1px solid var(--glass-border); border-bottom: none; }
             .day-tab.active { border-right: 1px solid var(--glass-border); border-bottom: 4px solid var(--accent-yellow); }
             .footer-content { grid-template-columns: 1fr; text-align: center; }
-            .header-contact { display: none; }
+            .header-contact { display: flex; justify-content: center; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255, 255, 255, 0.1); }
             .modal-meta { flex-direction: column; gap: 10px; text-align: left; }
             .meta-right { text-align: left; }
         }
@@ -2824,7 +2891,7 @@ footer {
             .team-dept-title { text-align: center; }
             .section-header { font-size: 2.2rem; }
             nav ul { gap: 1rem; font-size: 0.8rem; }
-            .header-contact { display: none; } 
+            .header-contact { display: flex; justify-content: center; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255, 255, 255, 0.1); } 
         }
 
 
@@ -3168,7 +3235,7 @@ footer {
             .section-header { font-size: 2rem; }
             .dept-card, .full-width-card { aspect-ratio: 16 / 9; }
             nav ul { gap: 1rem; font-size: 0.8rem; }
-            .header-contact { display: none; } 
+            .header-contact { display: flex; justify-content: center; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255, 255, 255, 0.1); } 
             .footer-content { grid-template-columns: 1fr; text-align: center; }
             #footer-sitemap { display: flex; flex-direction: column; align-items: center; }
             .social-icons { justify-content: center; }
@@ -3425,7 +3492,7 @@ footer {
             .day-tab { writing-mode: horizontal-tb; transform: none; padding: 15px 30px; border-radius: 10px 10px 0 0; border-left: 1px solid var(--glass-border); border-bottom: none; }
             .day-tab.active { border-right: 1px solid var(--glass-border); border-bottom: 4px solid var(--accent-yellow); }
             .footer-content { grid-template-columns: 1fr; text-align: center; }
-            .header-contact { display: none; }
+            .header-contact { display: flex; justify-content: center; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255, 255, 255, 0.1); }
         }
 
 
@@ -3542,7 +3609,7 @@ footer {
             .day-tab { writing-mode: horizontal-tb; transform: none; padding: 15px 30px; border-radius: 10px 10px 0 0; border-left: 1px solid var(--glass-border); border-bottom: none; }
             .day-tab.active { border-right: 1px solid var(--glass-border); border-bottom: 4px solid var(--accent-yellow); }
             .footer-content { grid-template-columns: 1fr; text-align: center; }
-            .header-contact { display: none; }
+            .header-contact { display: flex; justify-content: center; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255, 255, 255, 0.1); }
             .modal-meta { flex-direction: column; gap: 10px; text-align: left; }
             .meta-right { text-align: left; }
         }
@@ -3665,7 +3732,7 @@ footer {
             .day-tab { writing-mode: horizontal-tb; transform: none; padding: 15px 30px; border-radius: 10px 10px 0 0; border-left: 1px solid var(--glass-border); border-bottom: none; }
             .day-tab.active { border-right: 1px solid var(--glass-border); border-bottom: 4px solid var(--accent-yellow); }
             .footer-content { grid-template-columns: 1fr; text-align: center; }
-            .header-contact { display: none; }
+            .header-contact { display: flex; justify-content: center; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255, 255, 255, 0.1); }
             .modal-meta { flex-direction: column; gap: 10px; text-align: left; }
             .meta-right { text-align: left; }
         }
@@ -3784,7 +3851,7 @@ footer {
             .day-tab { writing-mode: horizontal-tb; transform: none; padding: 15px 30px; border-radius: 10px 10px 0 0; border-left: 1px solid var(--glass-border); border-bottom: none; }
             .day-tab.active { border-right: 1px solid var(--glass-border); border-bottom: 4px solid var(--accent-yellow); }
             .footer-content { grid-template-columns: 1fr; text-align: center; }
-            .header-contact { display: none; }
+            .header-contact { display: flex; justify-content: center; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255, 255, 255, 0.1); }
             .modal-meta { flex-direction: column; gap: 10px; text-align: left; }
             .meta-right { text-align: left; }
         }
@@ -3846,10 +3913,67 @@ footer {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255,255,255,0.92%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2.1' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
+.navbar-toggler-icon{
+    margin-top: -15px;
+}
+
+.prize-banner{
+    width: 40%;
+    
+}
+
 @media (min-width: 992px) {
     /* Keep nav always visible on desktop even with Bootstrap collapse classes */
     #main-header .navbar-collapse {
         display: flex !important;
+    }
+}
+
+/* Mobile/Tablet Navbar Layout (below 992px) */
+@media (max-width: 991.98px) {
+    #main-header {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.5rem;
+    }
+    
+    /* Hamburger on left */
+    #main-header .navbar-toggler {
+        order: 1;
+        margin-right: auto;
+    }
+    
+    /* Logo in center */
+    #main-header .logo-container {
+        order: 2;
+        flex: 0 0 auto;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        justify-content: center;
+    }
+    
+    /* Mobile register button on right */
+    .mobile-register-btn {
+        order: 3;
+        margin-left: auto;
+        padding: 8px 16px !important;
+        font-size: 0.75rem !important;
+        white-space: nowrap;
+    }
+    
+    /* Collapsed menu below */
+    #main-header .navbar-collapse {
+        order: 4;
+        flex-basis: 100%;
+        margin-top: 1rem;
+    }
+    
+    /* Hide the register button inside collapsed menu on mobile */
+    #main-header .navbar-collapse .header-contact {
+        display: none !important;
     }
 }
 

@@ -32,15 +32,20 @@
     <canvas id="water-ripples"></canvas>
 
     <header id="main-header" class="container-fluid px-3 px-lg-5">
-        <div class="logo-container">
-            <a href="index.html">
-                <img src="images/Nift_logo_orginal1.png" alt="Logo" class="nav-logo-img">
-            </a>
-        </div>
-        
+        <!-- Hamburger button - shows on mobile/tablet -->
         <button class="navbar-toggler custom-nav-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#primaryNav" aria-controls="primaryNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+        
+        <!-- Logo container -->
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="images/Nift_logo_orginal1.webp" alt="Logo" class="nav-logo-img">
+            </a>
+        </div>
+        
+        <!-- Mobile register button - shows on right on mobile/tablet only -->
+        <a href="https://forms.gle/5urBq3kumRg4wjuAA" target="_blank" class="register-btn nav-register-btn mobile-register-btn d-lg-none">REGISTER NOW</a>
 
         <div class="collapse navbar-collapse" id="primaryNav">
             <nav>
@@ -59,10 +64,10 @@
 
     <main class="flex-grow-1">
         <section id="landing">
-            <img src="images/naksh logo.png" alt="Naksh Logo" id="naksh-main-logo">
+            <img src="images/naksh logo.webp" alt="Naksh Logo" id="naksh-main-logo" ">
             <p class="section-date">March 26th & 27th, 2026</p>
         <a href="#about" class="scroll-down-link">
-        <img src="images/scroll.png" alt="Scroll Down" class="spaceship-scroll">
+        <img src="images/scroll.webp" alt="Scroll Down" class="spaceship-scroll">
     </a>
         </section>
         
@@ -71,13 +76,13 @@
             <div class="about-top-section">
                 <div class="naksh-content-stack">
                     <div class="sponsor-logo-box">
-                        <img src="images/sponsorname.jpg" alt="Title Sponsor Logo">
+                        <img src="images/zebronics.webp" alt="Zebronics">
                     </div>
-                    <p class="presents-text">Presents...</p>
+                    <p class="presents-text">Presents</p>
                     
                     <p class="section-date">March 26th & 27th, 2026</p>
                     
-                    <img src="images/naksh logo.png" alt="Naksh 2026" class="naksh-logo-img">
+                    <img src="images/naksh logo.webp" alt="Naksh 2026" class="naksh-logo-img">
                     
                     <p class="naksh-desc">Where every pattern tells a story written in starlight. We absorb culture's cosmic energy, transform it into intricate naksh (designs), and radiate innovation. From celestial to textile, we weave the universe into fabric.</p>
                     
@@ -86,13 +91,15 @@
                 
                 <div class="media-split-grid">
                     <div class="video-desc-box">
-                        <strong>Experience Naksh:</strong> Dive into our official teaser. Enter a world where traditional fashion textures collide with a futuristic, galactic aesthetic.
+                        <strong>Experience Naksh:</strong> Naksh explores the moment where distance dissolves and inspiration turns into form. It’s a journey from creative emptiness to quiet revelation, where the universe is no longer something distant, but something felt, absorbed, and expressed. As the cosmos transforms into lines, patterns, and a finished canvas, creation becomes an act of translation. Naksh emerges as the mark where the infinite takes shape in the tangible.
                     </div>
-                    <div class="media-placeholder video-placeholder">
-                        <video autoplay muted loop id="naksh-video">
-                            <source src="images/teaser.mp4" type="video/mp4">
-                            Your browser does not support HTML5 video.
-                        </video>
+                    <div class="media-placeholder">
+                        <div class="video-thumbnail" id="naksh-video-thumbnail" style="cursor: pointer; position: relative;">
+                            <img src="https://img.youtube.com/vi/bfnhcA6Iang/maxresdefault.jpg" alt="Naksh Video Thumbnail" style="width: 100%; height: auto; display: block;">
+                            <div class="play-button-overlay" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 80px; height: 80px; background: rgba(0,0,0,0.7); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
+                                <div style="width: 0; height: 0; border-left: 25px solid white; border-top: 15px solid transparent; border-bottom: 15px solid transparent; margin-left: 8px;"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -110,21 +117,21 @@
 <div class="media-placeholder about-dir-ltr">
     <div class="slideshow-container">
         <div class="mySlides fade">
-            <img src="images/fashion show.JPG" alt="Spectrum Photo 1">
+            <img src="images/fashion show.webp" alt="Spectrum Photo 1">
         </div>
         
         <div class="mySlides fade">
-            <img src="images/dancee.JPG" alt="Spectrum Photo 2">
+            <img src="images/dance_2.webp" alt="Spectrum Photo 2">
         </div>
         
         <div class="mySlides fade">
-            <img src="images/star.JPG" alt="Spectrum Photo 3">
+            <img src="images/star.webp" alt="Spectrum Photo 3">
         </div>
         <div class="mySlides fade">
-            <img src="images/mr. & ms. spectrum.JPG" alt="Spectrum Photo 3">
+            <img src="images/spectrum models.webp" alt="Spectrum Photo 3">
         </div>
         <div class="mySlides fade">
-            <img src="images/f show.JPG" alt="Spectrum Photo 3">
+            <img src="images/f show.webp" alt="Spectrum Photo 3">
         </div>
 
         <div class="dots-container">
@@ -137,13 +144,13 @@
     </div>
 </section>
 
-        <section id="events">
+        <section id="events" class="d-flex flex-column align-items-center mb-0">
             <h1 class="section-header">Events Showcase</h1>
             
             <div class="carousel-container">
                 <div class="carousel-track" id="carousel-track">
                     <div class="carousel-card" onclick="updateCarousel(0)">
-                        <img src="images/Caricature.png" alt="Event 1">
+                        <img src="images/Caricature.webp" alt="Event 1">
                         <div class="card-info">
                             <h3>Caricature Competition</h3>
                             <p>Venue - FD 219</p>
@@ -154,7 +161,7 @@
                         </div>
                     </div>
                     <div class="carousel-card" onclick="updateCarousel(1)">
-                        <img src="images/SoloS.png" alt="Event 2">
+                        <img src="images/SoloS.webp" alt="Event 2">
                         <div class="card-info">
                             <h3>Solo Singing</h3>
                             <p>Venue - FD 222</p>
@@ -165,7 +172,7 @@
                         </div>
                     </div>
                     <div class="carousel-card" onclick="updateCarousel(2)">
-                        <img src="images/admad.png" alt="Event 3">
+                        <img src="images/admad.webp" alt="Event 3">
                         <div class="card-info">
                             <h3>Ad Mad</h3>
                             <p>Venue- FD 222</p>
@@ -176,7 +183,7 @@
                         </div>
                     </div>
                     <div class="carousel-card" onclick="updateCarousel(3)">
-                        <img src="images/nukkad-card.PNG" alt="Event 4">
+                        <img src="images/nukkad-card.webp" alt="Event 4">
                         <div class="card-info">
                             <h3>Nukkad Natak</h3>
                             <p>Venue- AD TD Passage</p>
@@ -187,7 +194,7 @@
                         </div>
                     </div>
                     <div class="carousel-card" onclick="updateCarousel(4)">
-                        <img src="images/FS.png" alt="Event 5">
+                        <img src="images/FS.webp" alt="Event 5">
                         <div class="card-info">
                             <h3>Fashion Show Competition </h3>
                             <p>Venue - Main Stage</p>
@@ -198,7 +205,7 @@
                         </div>
                     </div>
                     <div class="carousel-card" onclick="updateCarousel(5)">
-                        <img src="images/FIFA.png" alt="Event 6">
+                        <img src="images/FIFA.webp" alt="Event 6">
                         <div class="card-info">
                             <h3>E-sports(FIFA)</h3>
                             <p>Venue - BFT 004, BFT 005</p>
@@ -209,7 +216,7 @@
                         </div>
                     </div>
                     <div class="carousel-card" onclick="updateCarousel(6)">
-                        <img src="images/throw.png" alt="Event 7">
+                        <img src="images/throw.webp" alt="Event 7">
                         <div class="card-info">
                             <h3>Throwball(Girls)</h3>
                             <p>Venue-Volleyball Ground</p>
@@ -220,7 +227,7 @@
                         </div>
                     </div>
                     <div class="carousel-card" onclick="updateCarousel(7)">
-                        <img src="images/groupdance.PNG" alt="Event 8">
+                        <img src="images/groupdance.webp" alt="Event 8">
                         <div class="card-info">
                             <h3>Group Dance</h3>
                             <p>Main stage</p>
@@ -231,7 +238,7 @@
                         </div>
                     </div>
                     <div class="carousel-card" onclick="updateCarousel(8)">
-                        <img src="images/Chess.png" alt="Event 9">
+                        <img src="images/Chess.webp" alt="Event 9">
                         <div class="card-info">
                             <h3>Chess</h3>
                             <p>Venue- FD 122</p>
@@ -243,36 +250,28 @@
                     </div>
                 </div>
             </div>
-            
+            <div class="d-flex flex-column align-items-center mt-2 mb-2">
             <a href="events.html" class="know-more-btn">Explore All Events</a>
+            <img src="images/prize.webp" alt="prize banner" class="prize-banner">
+            </div>
         </section>
 
-        <section id="sponsors-list">
+        <section id="sponsors-list" class="">
             <h1 class="section-header">Sponsors</h1>
             <div class="sponsors-grid">
                 <div class="sponsor-card-white">
-                    <img src="images/ubi.png" alt="Sponsor 1" class="sponsor-logo-placeholder">
+                    <img src="images/ubi.webp" alt="Union Bank of India" class="sponsor-logo-placeholder">
+                </div>
+             
+              
+                <div class="sponsor-card-white">
+                    <img src="images/anjan_jwellers.webp" alt="Anjan Jwellers" class="sponsor-logo-placeholder">
                 </div>
                 <div class="sponsor-card-white">
-                    <img src="images/red bull.png" alt="Sponsor 2" class="sponsor-logo-placeholder">
+                    <img src="images/eventom.webp" alt="Eventom" class="sponsor-logo-placeholder">
                 </div>
                 <div class="sponsor-card-white">
-                    <img src="images/" alt="Sponsor 3" class="sponsor-logo-placeholder">
-                </div>
-                <div class="sponsor-card-white">
-                    <img src="sponsor_logo_4.png" alt="Sponsor 4" class="sponsor-logo-placeholder">
-                </div>
-                <div class="sponsor-card-white">
-                    <img src="sponsor_logo_5.png" alt="Sponsor 5" class="sponsor-logo-placeholder">
-                </div>
-                <div class="sponsor-card-white">
-                    <img src="sponsor_logo_6.png" alt="Sponsor 6" class="sponsor-logo-placeholder">
-                </div>
-                <div class="sponsor-card-white">
-                    <img src="sponsor_logo_7.png" alt="Sponsor 7" class="sponsor-logo-placeholder">
-                </div>
-                <div class="sponsor-card-white">
-                    <img src="images/jaiswal.png" alt="Sponsor 8" class="sponsor-logo-placeholder">
+                    <img src="images/jaiswal.webp" alt="Jaiswal Canteen" class="sponsor-logo-placeholder">
                 </div>
             </div>
         </section>
@@ -304,6 +303,22 @@
         </section>
     </main>
 
+    <!-- Video Lightbox Modal -->
+    <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content" style="background: #000; border: none;">
+                <div class="modal-header" style="border-bottom: none; padding: 1rem;">
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="padding: 0;">
+                    <div class="ratio ratio-16x9">
+                        <iframe id="youtube-iframe" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <footer>
         <div class="footer-content row g-4">
             <div class="footer-col col-12 col-md-6 col-lg-4">
@@ -328,7 +343,7 @@
                 <h4>FIND US HERE</h4>
                 <div class="social-icons">
                     <a href="https://www.instagram.com/spectrum.niftbbsr26/" target="_blank" rel="noopener noreferrer">
-                        <img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram">
+                        <img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.webp" alt="Instagram">
                     </a>
                 </div>
                 <div class="address-box">
