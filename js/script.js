@@ -808,31 +808,7 @@
     },
   ];
 
-  // Increments a localStorage visit counter once per browser session and
-  // populates the #visitor-counter element in the footer.
-  function initVisitorCounter() {
-    const el = document.getElementById("visitor-counter");
-    if (!el) return;
-
-    const STORAGE_KEY = "spectrum_visit_count";
-    const SESSION_KEY = "spectrum_session_counted";
-
-    let count = parseInt(localStorage.getItem(STORAGE_KEY) || "0", 10);
-
-    // Only increment once per session so refreshing does not keep inflating the count.
-    if (!sessionStorage.getItem(SESSION_KEY)) {
-      count += 1;
-      localStorage.setItem(STORAGE_KEY, String(count));
-      sessionStorage.setItem(SESSION_KEY, "1");
-    }
-
-    el.innerHTML =
-      '<span class="vc-icon">&#128065;</span>' +
-      '<span class="vc-count">' +
-      count.toLocaleString() +
-      "</span>" +
-      '<span class="vc-label">visitors</span>';
-  }
+  
 
   document.addEventListener("DOMContentLoaded", () => {
     window.filterEvents = function () {};
@@ -841,7 +817,7 @@
 
     initRipples();
     initHeaderScroll();
-    initVisitorCounter();
+   
 
     const page = getCurrentPage();
 

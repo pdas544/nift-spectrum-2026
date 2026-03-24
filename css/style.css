@@ -3863,34 +3863,6 @@ footer {
 .about-dir-ltr { direction: ltr; }
 .about-heading-left { text-align: left; }
 
-/* ===== Visitor Counter ===== */
-.visitor-counter {
-    margin-top: 12px;
-    font-size: 0.78rem;
-    letter-spacing: 1.5px;
-    font-family: 'Space Grotesk', sans-serif;
-    /* color: rgba(255, 255, 255, 0.35); */
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-}
-
-.visitor-counter .vc-icon {
-    font-size: 1.5rem;
-    
-}
-
-.visitor-counter .vc-count {
-    color: var(--accent-yellow);
-    font-weight: 600;
-    font-variant-numeric: tabular-nums;
-}
-
-.visitor-counter .vc-label {
-    text-transform: uppercase;
-}
 
 /* ===== Bootstrap Header Collapse Overrides ===== */
 #main-header .navbar-collapse {
